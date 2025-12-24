@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+.vscode
+.ruff_cache
+.docker
+roadmap
+
+api_gateway.log
+gateway.log
+
+TODO
+melhorias.md
+
+pokemon.db
