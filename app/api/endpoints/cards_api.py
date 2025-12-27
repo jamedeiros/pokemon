@@ -7,7 +7,7 @@ from app.core.db import DbSession
 from app.domain.schemas import CardInput, CardResponse
 from app.service import CardService
 
-router = APIRouter(prefix="/pokemon", tags=["pokemon"])
+router = APIRouter()
 
 
 ResponseCard = ResponseModel[CardResponse]
@@ -38,6 +38,3 @@ def list_cards(
             page_size=pagination.page_size,
         ),
     )
-
-
-# 037  159  JTG

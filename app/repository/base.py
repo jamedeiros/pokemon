@@ -16,7 +16,7 @@ class Repository[T]:
         stmt = select(self._entity).where(self._entity.id == id)
         return self._session.exec(stmt).one_or_none()
 
-    def list(self, filters: dict[str, Any] | None = None, skip: int = 0, limit: int = 100) -> tuple[list[T], int]:
+    def list(self, *, filters: dict[str, Any] | None = None, skip: int = 0, limit: int = 100) -> tuple[list[T], int]:
         stmt = select(self._entity)
         count_stmt = select(func.count()).select_from(self._entity)
 
